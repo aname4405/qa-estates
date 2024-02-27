@@ -7,15 +7,15 @@ pipeline {
                 bat 'npm start'
             }
         }
-        stage('Deploy') {
-            steps {
-                a: {
-                    bat 'npm run preview'
-                }
-                b: {
-                    bat 'npx json-server db.json'
-                }                
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         a: {
+        //             bat 'npm run preview'
+        //         }
+        //         b: {
+        //             bat 'npx json-server db.json'
+        //         }                
+        //     }
+        // }
     }
 }
