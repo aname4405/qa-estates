@@ -10,9 +10,9 @@ pipeline {
             steps {
                 parallel (
                     'npm run server': {
-                        bat 'npx json-server --watch db.json'
+                        bat 'npx json-server --watch db.json --port8000'
                     },
-                                        'npm start': {
+                    'npm start': {
                         bat 'npm start'
                     }
                 )                    
