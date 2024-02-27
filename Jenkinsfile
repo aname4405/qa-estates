@@ -9,11 +9,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 parallel (
-                    'npm start': {
-                        bat 'npm start'
-                    },
                     'npm run server': {
                         bat 'npx json-server --watch db.json'
+                    },
+                                        'npm start': {
+                        bat 'npm start'
                     }
                 )                    
             }             
